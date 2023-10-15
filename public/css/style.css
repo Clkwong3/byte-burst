@@ -1,0 +1,179 @@
+/* The Body Styles */
+
+/* Body Element*/
+body {
+  background-color: #000d3d;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+
+/* Flex Container with Column Layout */
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Element */
+.header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #b0c1c8;
+  border-bottom: 1px solid #2978ff;
+  transition: color 0.3s;
+}
+
+/* Navigation Bar Styles */
+
+/* Navigation Element */
+nav {
+  display: flex;
+  gap: 10px;
+  color: #000d3d;
+}
+
+/* Styles for Header & Nav Links */
+
+/* Header Links */
+.header-link {
+  margin-left: 18px;
+  font-size: 35px;
+}
+
+/* Navigation Links */
+.nav-link {
+  font-size: 18px;
+}
+
+/* Common Styling for Header and Navigation Links */
+.header-link,
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: #000d3d;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+/* Underline Effect on Header and Navigation Links */
+.header-link::after,
+.nav-link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 0;
+  background-color: #001f3f;
+  bottom: 0;
+  transition: width 0.5s ease-in-out;
+}
+
+/* Hover for Header and Navigation Links */
+.header-link:hover,
+.nav-link:hover {
+  color: #001f3f;
+}
+
+/* Hover for the Underline Effect on Header and Navigation Links */
+.header-link:hover::after,
+.nav-link:hover::after {
+  width: 100%; /* Full width on hover */
+}
+
+/* Main Content Styles */
+
+/* Main Element */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+/* Register Form Styles */
+
+/* Registration Card */
+.register-form-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 500px;
+}
+
+/* Header of the Registration Card */
+.register-body-header {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Main Content of the Registration Card */
+.register-body-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form Row (Username, Email, Password) */
+.formRow {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+/* Input Field in each Form Row */
+.formRow-input {
+  flex: 1;
+}
+
+/* Label in each Form Row */
+.formRow-label {
+  width: 120px;
+  font-weight: bold;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 18px;
+}
+
+/* Input Element inside .formRow-input */
+.formRow-input input {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+/* Button and Message Container */
+.button-and-message-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Login Message */
+.login-message {
+  margin: 0;
+}
+
+/* Registration Button */
+.register-btn {
+  background-color: #266128;
+  color: #fff;
+  padding: 10px;
+  margin-right: 35px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Hover for Registration Button */
+.register-btn:hover {
+  background-color: #45a049;
+}

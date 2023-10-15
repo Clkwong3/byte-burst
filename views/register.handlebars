@@ -1,0 +1,72 @@
+<main class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="register-form-card">
+        <div class="register-body-header">
+          <h1>Register</h1>
+        </div>
+
+        <div class="register-body-main">
+          <!-- Opening the form tag -->
+          <form>
+            <div class="register-body-content">
+              <!-- Username input field -->
+              <div class="formRow">
+                <label class="formRow-label" for="username">Username:</label>
+                <div class="formRow-input">
+                  <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Enter your username"
+                    required
+                  />
+                </div>
+              </div>
+
+              <!-- Email input field -->
+              <div class="formRow">
+                <label class="formRow-label" for="email">Email:</label>
+                <div class="formRow-input">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                  />
+                </div>
+              </div>
+
+              <!-- Password input field -->
+              <div class="formRow">
+                <label class="formRow-label" for="password">Password:</label>
+                <div class="formRow-input">
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    required
+                  />
+                </div>
+              </div>
+
+              <!-- Register button and login message container -->
+              <div class="button-and-message-container">
+                <!-- Login message with a link to the login page -->
+                <p class="login-message">Already have an account?
+                  <a href="/login">Login</a>
+                </p>
+
+                <!-- Submit button -->
+                <button class="register-btn" type="submit">Register</button>
+              </div>
+            </div>
+          </form>
+          <!-- Closing the form tag -->
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
