@@ -32,5 +32,5 @@ const registerFormHandler = async (event) => {
 
 // Attach the registration form handler to the form's submit event
 document
-  .querySelector(".register-form")
+  .querySelector("#register-form")
   .addEventListener("submit", registerFormHandler);

@@ -37,17 +37,6 @@ nav {
 
 /* Styles for Header & Nav Links */
 
-/* Header Links */
-.header-link {
-  margin-left: 18px;
-  font-size: 35px;
-}
-
-/* Navigation Links */
-.nav-link {
-  font-size: 18px;
-}
-
 /* Common Styling for Header and Navigation Links */
 .header-link,
 .nav-link {
@@ -56,19 +45,7 @@ nav {
   color: #000d3d;
   font-weight: bold;
   transition: color 0.3s;
-}
-
-/* Underline Effect on Header and Navigation Links */
-.header-link::after,
-.nav-link::after {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 2px;
-  width: 0;
-  background-color: #001f3f;
-  bottom: 0;
-  transition: width 0.5s ease-in-out;
+  font-size: 18px;
 }
 
 /* Hover for Header and Navigation Links */
@@ -81,6 +58,37 @@ nav {
 .header-link:hover::after,
 .nav-link:hover::after {
   width: 100%; /* Full width on hover */
+}
+
+/* Underline Effect on Navigation Links */
+.nav-link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 0;
+  background-color: #001f3f;
+  bottom: 0;
+  transition: width 0.5s ease-in-out;
+}
+
+/* Underline Effect on Header Link */
+.header-link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  margin-left: 18px;
+  height: 2px;
+  width: 0;
+  background-color: #001f3f;
+  bottom: 0px;
+  transition: width 0.5s ease-in-out;
+}
+
+/* Header Links */
+.header-link {
+  margin-left: 18px;
+  font-size: 35px;
 }
 
 /* Main Content Styles */

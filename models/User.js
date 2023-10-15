@@ -26,7 +26,7 @@ User.init(
       allowNull: false,
       unique: true, // No two users can have the same username
       validate: {
-        maxlen: [25], // Max length of the user_name
+        len: [1, 25], // Min length 1, Max length 25 of the user_name
       },
     },
     email: {
@@ -38,7 +38,7 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        minlen: [8], // Minimum length of the password
+        len: [8], // Minimum length of the password
         isAlphanumeric: true, // Password should only contain letters and numbers
       },
     },
