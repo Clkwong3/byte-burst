@@ -9,8 +9,14 @@ const registerFormHandler = async (event) => {
   const password = document.querySelector("#password").value.trim();
 
   // Check if all required fields are filled
-  if (user_name && email && password) {
-    // If all fields are filled, send a POST request to the server
+  if (!user_name || !email || !password) {
+    alert("Please fill in all fields.");
+    return; // Exit the function if validation fails
+  }
+
+  // Use try-catch block to catch network/server-side errors
+  try {
+    // Send POST Request to the server for registration
     const response = await fetch("/api/users/register", {
       method: "POST",
       body: JSON.stringify({ user_name, email, password }),
@@ -24,9 +30,9 @@ const registerFormHandler = async (event) => {
     } else {
       alert(response.statusText);
     }
-  } else {
-    console.error("Unexpected error in registration form submission.");
-    alert("Missing information. Please fill in all fields.");
+  } catch (error) {
+    console.error("An unexpected error occurred:", error);
+    alert("An unexpected error occurred. Please try again later.");
   }
 };
 

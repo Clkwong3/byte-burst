@@ -11,7 +11,9 @@ const loginFormHandler = async (event) => {
   if (!email || !password) {
     alert("Please fill in all fields.");
     return; // Exit the function if validation fails
-  } else {
+  }
+
+  try {
     // Send POST Request to the server for login
     const response = await fetch("/api/users/login", {
       method: "POST",
@@ -19,13 +21,16 @@ const loginFormHandler = async (event) => {
       headers: { "Content-Type": "application/json" },
     });
 
-    // Check if the login was successfull
+    // Check if the login was successful
     if (response.ok) {
       console.log(response);
       window.location.replace("/dashboard");
     } else {
       alert(response.statusText);
     }
+  } catch (error) {
+    console.error("An unexpected error occurred:", error);
+    alert("An unexpected error occurred. Please try again later.");
   }
 };
 
