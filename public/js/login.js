@@ -13,6 +13,7 @@ const loginFormHandler = async (event) => {
     return; // Exit the function if validation fails
   }
 
+  // Use try-catch block to catch network/server-side errors
   try {
     // Send POST Request to the server for login
     const response = await fetch("/api/users/login", {

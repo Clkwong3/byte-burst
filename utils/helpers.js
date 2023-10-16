@@ -1,5 +1,5 @@
 // Importing the user model module
-const userModel = require("../models/user");
+const userModel = require("../models/User");
 
 // Exporting a set of functions as a module
 module.exports = {
@@ -22,4 +22,28 @@ module.exports = {
       return "Unknown User";
     }
   },
+  // Format a date as MM/DD/YYYY
+  format_date: (date) => {
+    try {
+      // Check if the date is undefined or not a valid date object
+      return !date || !(date instanceof Date) || isNaN(date.getTime())
+        ? "Invalid Date"
+        : date.toLocaleDateString();
+    } catch (error) {
+      // Log error information with a timestamp
+      console.error(
+        `Error formatting date at ${new Date().toLocaleString()}:`,
+        error
+      );
+
+      // If an error occurs, return "Invalid Date"
+      return "Invalid Date";
+    }
+  },
 };
+
+// Catch unhandled promise rejections globally in app
+process.on("unhandledRejection", (reason, promise) => {
+  // Log information about the unhandled rejection
+  console.error("Unhandled Rejection at:", promise, "reason:", reason);
+});

@@ -1,0 +1,58 @@
+<main class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="login-form-card">
+        <div class="login-body-header">
+          <h1>Login</h1>
+        </div>
+
+        <div class="login-body-main">
+          <!-- Opening the form tag -->
+          <form id="login-form">
+            <div class="login-body-content">
+              <!-- Email input field -->
+              <div class="formRow">
+                <label class="formRow-label" for="email">Email:</label>
+                <div class="formRow-input">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter Email Address"
+                  />
+                </div>
+              </div>
+
+              <!-- Password input field -->
+              <div class="formRow">
+                <label class="formRow-label" for="password">Password:</label>
+                <div class="formRow-input">
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter Password"
+                  />
+                </div>
+              </div>
+
+              <!-- Login button and register message container -->
+              <div class="button-and-message-container">
+                <!-- Register message with a link to the register page -->
+                <p class="register-message">Don't have an account?
+                  <a href="/register">Register</a>
+                </p>
+
+                <!-- Submit button -->
+                <button class="login-btn" type="submit">Login</button>
+              </div>
+            </div>
+          </form>
+          <!-- Closing the form tag -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Include JavaScript file for registration logic -->
+  <script src="/js/login.js"></script>
+</main>

@@ -2,7 +2,7 @@
 
 /* Body Element*/
 body {
-  background-color: #000d3d;
+  background-color: #b0c1c8;
   margin: 0;
   font-family: Arial, sans-serif;
 }
@@ -21,7 +21,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #b0c1c8;
+  background-color: #000d3d;
   border-bottom: 1px solid #2978ff;
   transition: color 0.3s;
 }
@@ -31,8 +31,9 @@ body {
 /* Navigation Element */
 nav {
   display: flex;
+  margin-right: 18px;
   gap: 10px;
-  color: #000d3d;
+  color: #e3e9ea;
 }
 
 /* Styles for Header & Nav Links */
@@ -42,16 +43,23 @@ nav {
 .nav-link {
   position: relative;
   text-decoration: none;
-  color: #000d3d;
+  color: #e3e9ea;
   font-weight: bold;
   transition: color 0.3s;
   font-size: 18px;
 }
 
+/* Header Link */
+.header-link {
+  margin-left: 18px;
+  font-size: 35px;
+}
+
 /* Hover for Header and Navigation Links */
 .header-link:hover,
 .nav-link:hover {
-  color: #001f3f;
+  color: #e3e9ea;
+  text-decoration: none;
 }
 
 /* Hover for the Underline Effect on Header and Navigation Links */
@@ -65,11 +73,12 @@ nav {
   content: "";
   display: block;
   position: absolute;
+  margin-right: 18px;
   height: 2px;
   width: 0;
-  background-color: #001f3f;
+  background-color: #e3e9ea;
   bottom: 0;
-  transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out !important;
 }
 
 /* Underline Effect on Header Link */
@@ -80,15 +89,9 @@ nav {
   margin-left: 18px;
   height: 2px;
   width: 0;
-  background-color: #001f3f;
+  background-color: #e3e9ea;
   bottom: 0px;
-  transition: width 0.5s ease-in-out;
-}
-
-/* Header Links */
-.header-link {
-  margin-left: 18px;
-  font-size: 35px;
+  transition: width 0.5s ease-in-out !important;
 }
 
 /* Main Content Styles */
@@ -190,4 +193,65 @@ main {
 .register-btn:hover,
 .login-btn:hover {
   background-color: #45a049;
+}
+
+/* Homepage Styles */
+
+/* Main Content Styles for Homepage */
+.homepage-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 80%;
+}
+
+/* Welcome Message Styles */
+.welcome-container {
+  margin-bottom: 20px;
+}
+
+/* Post Container Styles */
+.post-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Individual Post Styles */
+.post {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  width: 110%;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.post-content {
+  font-size: 18px;
+  color: #333;
+}
+
+.post-info {
+  color: #888;
+  margin-top: 10px;
+}
+
+.post * {
+  box-sizing: border-box;
+}
+
+/* No Posts Message Styles */
+.no-posts {
+  color: #888;
+  font-size: 18px;
+  margin-top: 20px;
 }

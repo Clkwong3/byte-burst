@@ -1,0 +1,28 @@
+<div class="homepage-main">
+  <!-- Welcome Container -->
+  <div class="welcome-container">
+    <h2>Welcome to Byte Burst!</h2>
+    <p>Discover and share your thoughts with the Byte Burst community.</p>
+  </div>
+
+  <!-- Post Container -->
+  <div class="post-container">
+    {{#if posts}}
+      {{#each posts as |post|}}
+        <div class="post">
+          <h3 class="post-title">
+            <a href="/post/{{post.id}}">{{post.title}}</a>
+          </h3>
+          <p class="post-info">
+            Author:
+            {{post.User.user_name}}
+            on
+            {{format_date post.createdAt}}
+          </p>
+        </div>
+      {{/each}}
+    {{else}}
+      <p class="no-posts">No posts available.</p>
+    {{/if}}
+  </div>
+</div>
