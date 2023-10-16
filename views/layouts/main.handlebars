@@ -16,10 +16,10 @@
           <a href="/" class="nav-link">Home</a>
           |
           {{#if logged_in}}
-            {{#if is_profile_page}}
+            {{#if is_dashboard_page}}
               <a href="#" class="nav-link logout-link">Logout</a>
             {{else}}
-              <a href="/profile" class="nav-link">Profile</a>
+              <a href="/dashboard" class="nav-link">Dashboard</a>
               |
               <a href="#" class="nav-link logout-link">Logout</a>
             {{/if}}

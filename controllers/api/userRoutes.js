@@ -10,7 +10,6 @@ const { User } = require("../../models");
 router.post("/register", async (req, res) => {
   // Log a message to indicate that the registration route is being accessed
   console.log("Entering the registration route");
-  console.log(User);
 
   try {
     // Creating a new user using the data from the request body
@@ -58,12 +57,11 @@ router.post("/login", async (req, res) => {
     // Log received login data for debugging
     console.log("Received login data: ", email, password);
 
-    // Find a user with the provided email
+    // Find user by email and validate the provided password
     const foundUser = await User.findOne({ where: { email: email } });
-    // Check if the user exists and the password is valid
     const validPassword = await foundUser.checkPassword(password);
 
-    // If both the user is found and the password is valid
+    // Check if the user exists and the password is valid
     if (foundUser && validPassword) {
       // Save user details in the session for future authentication
       req.session.save(() => {
@@ -87,6 +85,15 @@ router.post("/login", async (req, res) => {
       .status(500)
       .json({ message: "Unable to login. Please try again.", error });
   }
+});
+
+// Route to handle user logout at the "/logout" endpoint (DELETE request)
+// http://localhost:3001/api/users/logout
+router.delete("/logout", (req, res) => {
+  // Logs the user out by removing the session information
+  req.session.destroy(() => {
+    res.status(204).end(); // Respond with a 204 (No Content) status
+  });
 });
 
 // Export the router

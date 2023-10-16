@@ -12,14 +12,14 @@ const loginFormHandler = async (event) => {
     alert("Please fill in all fields.");
     return; // Exit the function if validation fails
   } else {
-    // Send Post Request to the server for login
+    // Send POST Request to the server for login
     const response = await fetch("/api/users/login", {
       method: "POST",
       body: JSON.stringify({ email, password }),
       headers: { "Content-Type": "application/json" },
     });
 
-    // Check if the lgoin was successfull
+    // Check if the login was successfull
     if (response.ok) {
       console.log(response);
       window.location.replace("/dashboard");
