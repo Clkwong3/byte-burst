@@ -38,8 +38,7 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [8], // Minimum length of the password
-        isAlphanumeric: true, // Password should only contain letters and numbers
+        len: [8], // Length of the password
       },
     },
   },

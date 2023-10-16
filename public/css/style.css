@@ -104,7 +104,8 @@ main {
 /* Register Form Styles */
 
 /* Registration Card */
-.register-form-card {
+.register-form-card,
+.login-form-card {
   background-color: #fff;
   border-radius: 8px;
   padding: 20px;
@@ -112,14 +113,16 @@ main {
 }
 
 /* Header of the Registration Card */
-.register-body-header {
+.register-body-header,
+.login-body-header {
   text-align: center;
   font-size: 24px;
   margin-bottom: 20px;
 }
 
 /* Main Content of the Registration Card */
-.register-body-content {
+.register-body-content,
+.login-body-content {
   display: flex;
   flex-direction: column;
 }
@@ -166,12 +169,14 @@ main {
 }
 
 /* Login Message */
+.register-message,
 .login-message {
   margin: 0;
 }
 
-/* Registration Button */
-.register-btn {
+/* Registration and Login Button */
+.register-btn,
+.login-btn {
   background-color: #266128;
   color: #fff;
   padding: 10px;
@@ -181,7 +186,8 @@ main {
   cursor: pointer;
 }
 
-/* Hover for Registration Button */
-.register-btn:hover {
+/* Hover for Registration and Login Button */
+.register-btn:hover,
+.login-btn:hover {
   background-color: #45a049;
 }

@@ -3,7 +3,7 @@ const registerFormHandler = async (event) => {
   console.log("Register form handler is being executed.");
   event.preventDefault(); // Prevent the default form submission behavior
 
-  // Retrieve user input values from the form
+  // Retrieve user input values from the registration form
   const user_name = document.querySelector("#username").value.trim();
   const email = document.querySelector("#email").value.trim();
   const password = document.querySelector("#password").value.trim();
