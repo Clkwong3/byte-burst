@@ -1,0 +1,28 @@
+<main id="dashboard-page" class="container container-fluid leaves-bg">
+  <!-- Container for user profile information -->
+  <div class="user-dashboard">
+    <!-- Dashboard Header -->
+    <div class="dashboard-header">
+      <h2>Welcome, {{user.user_name}}!</h2>
+    </div>
+
+    <!-- Container for User's Posts -->
+    <div class="user-posts-container">
+      <h3>Your Posts:</h3>
+
+      <div class="user-posts">
+        <!-- Iterate over user's posts and display links with dates -->
+        {{#if posts as |user-made-post|}}
+          {{#each posts as |individual-post|}}
+            <div class="post-link">
+              <a href="/post/{{id}}">{{title}}</a>
+              <p>Created on {{createdAt}}</p>
+            </div>
+          {{/each}}
+        {{else}}
+          <p class="no-posts-created">No posts available.</p>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</main>

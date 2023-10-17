@@ -1,21 +1,18 @@
-/* The Body Styles */
-
-/* Body Element*/
+/* Body Styles */
 body {
-  background-color: #b0c1c8;
   margin: 0;
   font-family: Arial, sans-serif;
+  background-color: #b0c1c8;
+}
+
+/* Body Container Styles */
+.body-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
 }
 
 /* Header Styles */
-
-/* Flex Container with Column Layout */
-.flex-column {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Header Element */
 .header {
   padding: 10px;
   display: flex;
@@ -26,17 +23,17 @@ body {
   transition: color 0.3s;
 }
 
-/* Navigation Bar Styles */
+.header h1 {
+  margin: 0;
+}
 
-/* Navigation Element */
+/* Navigation Bar Styles */
 nav {
   display: flex;
   margin-right: 18px;
   gap: 10px;
   color: #e3e9ea;
 }
-
-/* Styles for Header & Nav Links */
 
 /* Common Styling for Header and Navigation Links */
 .header-link,
@@ -49,26 +46,22 @@ nav {
   font-size: 18px;
 }
 
-/* Header Link */
 .header-link {
-  margin-left: 18px;
-  font-size: 35px;
+  font-size: 30px;
+  margin-left: 18px
 }
 
-/* Hover for Header and Navigation Links */
 .header-link:hover,
 .nav-link:hover {
   color: #e3e9ea;
   text-decoration: none;
 }
 
-/* Hover for the Underline Effect on Header and Navigation Links */
 .header-link:hover::after,
 .nav-link:hover::after {
-  width: 100%; /* Full width on hover */
+  width: 100%;
 }
 
-/* Underline Effect on Navigation Links */
 .nav-link::after {
   content: "";
   display: block;
@@ -81,7 +74,6 @@ nav {
   transition: width 0.5s ease-in-out !important;
 }
 
-/* Underline Effect on Header Link */
 .header-link::after {
   content: "";
   display: block;
@@ -95,13 +87,9 @@ nav {
 }
 
 /* Main Content Styles */
-
-/* Main Element */
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
+  flex: 1;
+  padding: 20px; /* Adjust as needed */
 }
 
 /* Register Form Styles */
@@ -254,4 +242,34 @@ main {
   color: #888;
   font-size: 18px;
   margin-top: 20px;
+}
+
+/* Dashboard Styles */
+
+/* Container for user dashboard information */
+.user-dashboard {
+  text-align: left;
+}
+
+/* Dashboard Header Styles */
+.dashboard-header {
+  margin-bottom: 20px;
+}
+
+/* Style for the line under "Welcome, {{user.user_name}}!" */
+.dashboard-header h2 {
+  border-bottom: 2px solid #2978ff; 
+  padding-bottom: 5px; 
+}
+
+/* Container for User's Posts */
+.user-posts-container {
+  text-align: left;
+}
+
+/* Style for the "No posts available" message */
+.no-posts-created {
+  margin-top: 20px;
+  color: #888;
+  font-size: 18px;
 }

@@ -46,7 +46,7 @@ router.post("/register", async (req, res) => {
 });
 
 // Route to handle user login at the "/login" endpoint (POST request)
-// http://localhost:3001/api/users/register
+// http://localhost:3001/api/users/login
 router.post("/login", async (req, res) => {
   // Log that the login route is being accessed
   console.log("Entering the login route");
