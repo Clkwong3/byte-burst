@@ -9,7 +9,7 @@ body {
 .body-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; 
+  min-height: 100vh;
 }
 
 /* Header Styles */
@@ -48,7 +48,7 @@ nav {
 
 .header-link {
   font-size: 30px;
-  margin-left: 18px
+  margin-left: 18px;
 }
 
 .header-link:hover,
@@ -258,8 +258,8 @@ main {
 
 /* Style for the line under "Welcome, {{user.user_name}}!" */
 .dashboard-header h2 {
-  border-bottom: 2px solid #2978ff; 
-  padding-bottom: 5px; 
+  border-bottom: 2px solid #2978ff;
+  padding-bottom: 5px;
 }
 
 /* Container for User's Posts */
@@ -267,9 +267,87 @@ main {
   text-align: left;
 }
 
+/* Container for "Your Posts" and the link to create a new post */
+.dashboard-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
 /* Style for the "No posts available" message */
 .no-posts-created {
   margin-top: 20px;
   color: #888;
   font-size: 18px;
+}
+
+/* New Post Styles */
+
+/* New Post Form */
+.new-post-container {
+  margin-top: 20px;
+}
+
+.new-post-form {
+  display: flex;
+  flex-direction: column;
+  background-color: #ddd9d1;
+  padding: 20px;
+}
+
+.new-post-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.new-post-form input,
+.new-post-form textarea {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 100%; /* Adjust to fill the available space */
+}
+
+.new-post-form textarea {
+  height: 150px;
+}
+
+.new-post-form .submit-btn {
+  align-self: flex-end;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  background-color: #2d3e50;
+  color: #d9e9e8;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.new-post-form .form-group {
+  margin-bottom: 15px;
+}
+
+/* Common Styling for Form Elements */
+.new-post-form input,
+.new-post-form textarea,
+.new-post-form {
+  margin: 10px;
+  width: calc(
+    100% - 20px
+  ); 
+}
+
+.new-post-form input,
+.new-post-form textarea {
+  font-size: 18px;
+}
+
+.new-post-form .submit-btn:hover {
+  background-color: #1d2d3a;
 }

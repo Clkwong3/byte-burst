@@ -42,5 +42,14 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
+// Render the 'addNew' view for creating a new post
+// http://localhost:3001/profile/addNew
+router.get("/new", withAuth, (req, res) => {
+  // Render the "addNew" page to view
+  res.render("addNew", {
+    logged_in: req.session.logged_in, // Pass the logged_in status to the view
+  });
+});
+
 // Export the router
 module.exports = router;
