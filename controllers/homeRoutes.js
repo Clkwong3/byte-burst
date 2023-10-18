@@ -15,7 +15,9 @@ router.get("/", async (req, res) => {
     });
 
     // Convert Sequelize instances to plain JavaScript objects
-    const plainPostsData = allPostsData.map((post) => post.get());
+    const plainPostsData = allPostsData.map((post) =>
+      post.get({ plain: true })
+    );
 
     console.log(plainPostsData);
 

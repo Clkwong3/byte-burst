@@ -16,11 +16,11 @@
 
       <div class="user-posts">
         <!-- Iterate over user's posts and display links with dates -->
-        {{#if posts as |user-made-post|}}
-          {{#each posts as |individual-post|}}
+        {{#if posts}}
+          {{#each posts as |individualPost|}}
             <div class="post-link">
-              <a href="/post/{{id}}">{{title}}</a>
-              <p>Created on {{createdAt}}</p>
+              <a href="/post/{{individualPost.id}}">{{individualPost.title}}</a>
+              <p>Created on {{format_date individualPost.createdAt}}</p>
             </div>
           {{/each}}
         {{else}}

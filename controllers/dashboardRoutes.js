@@ -19,15 +19,19 @@ router.get("/", withAuth, async (req, res) => {
     });
 
     // Convert Sequelize instances to plain JavaScript objects
-    const plainUserData = userData.get();
+    const plainUserData = userData.Posts.map((post) =>
+      post.get({ plain: true })
+    );
+
+    console.log(plainUserData);
 
     // Render the "dashboard" view with user's posts and user_name
     res.render("dashboard", {
       user: {
         user_id: req.session.user_id,
-        user_name: plainUserData.user_name,
+        user_name: userData.user_name, // Access user_name directly from userData
       },
-      posts: plainUserData.Posts,
+      posts: plainUserData, // Pass the array of plain objects directly
       logged_in: req.session.logged_in, // Send information about user login status
     });
   } catch (error) {
