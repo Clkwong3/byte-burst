@@ -58,8 +58,6 @@ router.get("/", async (req, res) => {
       post.get({ plain: true })
     );
 
-    console.log(plainPostsData);
-
     // Render the "homepage" view with plain post data
     res.render("homepage", {
       posts: plainPostsData, // Send the plain posts data to the view

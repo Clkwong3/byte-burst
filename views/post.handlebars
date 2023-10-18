@@ -1,15 +1,13 @@
-<div class="individual-post">
+<!-- Hidden input to store the post id -->
+<div class="individual-post" data-post-id="{{post.id}}">
   <div class="post">
-    <!-- Hidden input to store the post id -->
-    <input type="hidden" value="{{post.id}}" />
-
     <!-- Post Header -->
     <div class="post-header">
       <h3>{{post.title}}</h3>
 
       <!-- Tagline with author's username and creation date -->
       <p class="tagline">
-        Posted by
+        Written by
         {{post.User.user_name}}
         on
         {{format_date post.createdAt}}
@@ -18,15 +16,17 @@
 
     <!-- Post Content -->
     <div class="post-body">
-      <p class="post-content">
-        {{post.content}}
-      </p>
+      <p class="post-content"> {{post.content}} </p>
 
       <!-- Add/Edit/Delete buttons (if authenticated user is the post owner) -->
       {{#if isOwner}}
-        <button class="edit-post-btn" data-id="{{post.id}}">Edit</button>
-        <button class="delete-post-btn" data-id="{{post.id}}">Delete</button>
+        <div class="post-btns-container">
+          <button class="edit-post-btn">&#x270F; Edit</button>
+          <button class="delete-post-btn">&#x1F5D1; Delete</button>
+        </div>
       {{/if}}
     </div>
   </div>
 </div>
+
+<script src="/js/postBtns.js"></script>

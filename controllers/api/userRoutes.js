@@ -54,8 +54,6 @@ router.post("/login", async (req, res) => {
   try {
     // Extract email and password from the request body
     const { email, password } = req.body;
-    // Log received login data for debugging
-    console.log("Received login data: ", email, password);
 
     // Find user by email and validate the provided password
     const foundUser = await User.findOne({ where: { email: email } });

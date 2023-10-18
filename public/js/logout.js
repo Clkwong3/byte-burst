@@ -1,7 +1,5 @@
 // Handle logout process
 const logoutHandler = async () => {
-  console.log("Logout handler is being executed");
-
   try {
     // Send DELETE Request to the server to logout
     const response = await fetch("/api/user/logout", {

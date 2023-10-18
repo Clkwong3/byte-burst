@@ -1,6 +1,7 @@
 /* Body Styles */
 body {
   margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
   background-color: #b0c1c8;
 }
@@ -90,6 +91,16 @@ nav {
 main {
   flex: 1;
   padding: 20px; /* Adjust as needed */
+}
+
+/* Homepage Main Container Styles */
+.homepage-main {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 80%;
 }
 
 /* Register Form Styles */
@@ -213,7 +224,7 @@ main {
   padding: 15px;
   margin-bottom: 20px;
   border-radius: 8px;
-  width: 110%;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -242,6 +253,29 @@ main {
   color: #888;
   font-size: 18px;
   margin-top: 20px;
+}
+
+.post-btns-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.edit-post-btn,
+.delete-post-btn {
+  padding: 0.5rem 0.8rem;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  background-color: #0e4271;
+  color: #d9e9e8;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.edit-post-btn:hover,
+.delete-post-btn:hover {
+  background-color: #11032f; 
 }
 
 /* Dashboard Styles */
@@ -309,7 +343,7 @@ main {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  width: 100%; /* Adjust to fill the available space */
+  width: 100%;
 }
 
 .new-post-form textarea {
@@ -338,9 +372,7 @@ main {
 .new-post-form textarea,
 .new-post-form {
   margin: 10px;
-  width: calc(
-    100% - 20px
-  ); 
+  width: calc(100% - 20px);
 }
 
 .new-post-form input,
@@ -350,4 +382,79 @@ main {
 
 .new-post-form .submit-btn:hover {
   background-color: #1d2d3a;
+}
+
+/* Edit Post Styles */
+.edit-post-container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%; 
+}
+
+.edit-post-form {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 70%; /* Adjust as needed */
+}
+
+.edit-post-form label {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.edit-post-form input,
+.edit-post-form textarea {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 18px;
+}
+
+.edit-post-form textarea {
+  height: 150px;
+}
+
+.edit-post-form .submit-btn,
+.edit-post-form .cancel-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.edit-post-form .submit-btn {
+  background-color: #2d3e50;
+  color: #d9e9e8;
+  margin-right: 10px;
+}
+
+.edit-post-form .submit-btn:hover {
+  background-color: #1d2d3a;
+}
+
+.edit-post-form .cancel-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #266128;
+  color: #fff;
+  border: 1px solid #666; 
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-post-form .cancel-btn:hover {
+  background-color: #45a049;
 }

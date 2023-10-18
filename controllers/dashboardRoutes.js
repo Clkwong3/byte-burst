@@ -24,8 +24,6 @@ router.get("/", withAuth, async (req, res) => {
       post.get({ plain: true })
     );
 
-    console.log(plainUserData);
-
     // Render the "dashboard" view with user's posts and user_name
     res.render("dashboard", {
       user: {
