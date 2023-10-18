@@ -4,7 +4,7 @@ const logoutHandler = async () => {
 
   try {
     // Send DELETE Request to the server to logout
-    const response = await fetch("/api/users/logout", {
+    const response = await fetch("/api/user/logout", {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
     });

@@ -16,7 +16,7 @@ const loginFormHandler = async (event) => {
   // Use try-catch block to catch network/server-side errors
   try {
     // Send POST Request to the server for login
-    const response = await fetch("/api/users/login", {
+    const response = await fetch("/api/user/login", {
       method: "POST",
       body: JSON.stringify({ email, password }),
       headers: { "Content-Type": "application/json" },

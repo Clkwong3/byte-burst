@@ -1,6 +1,7 @@
 // Import required dependencies and models
 const express = require("express");
 const router = express.Router();
+const postRoutes = require("./api/postRoutes");
 
 // Import Sequelize model for User and Post
 const { User, Post } = require("../models");
@@ -40,20 +41,23 @@ router.get("/", withAuth, async (req, res) => {
 
     // Send an error response with a 500 status and message
     res.status(500).render("error", {
-      message: "Internal Server Error",
+      message: "Something went wrong. Please try again later.",
       logged_in: req.session.logged_in, // Send information about user login status if needed
     });
   }
 });
 
 // Render the 'addNew' view for creating a new post
-// http://localhost:3001/profile/addNew
+// http://localhost:3001/dashboard/new
 router.get("/new", withAuth, (req, res) => {
   // Render the "addNew" page to view
   res.render("addNew", {
     logged_in: req.session.logged_in, // Pass the logged_in status to the view
   });
 });
+
+// Include postRoutes
+router.use("/post", postRoutes);
 
 // Export the router
 module.exports = router;

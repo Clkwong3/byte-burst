@@ -17,7 +17,7 @@ const registerFormHandler = async (event) => {
   // Use try-catch block to catch network/server-side errors
   try {
     // Send POST Request to the server for registration
-    const response = await fetch("/api/users/register", {
+    const response = await fetch("/api/user/register", {
       method: "POST",
       body: JSON.stringify({ user_name, email, password }),
       headers: { "Content-Type": "application/json" },

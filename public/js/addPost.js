@@ -10,7 +10,7 @@ async function addPost(e) {
     const content = document.querySelector("#post-content").value; // Retrieve content from textarea
 
     // Make a POST request to create a new post
-    const response = await fetch("/api/posts", {
+    const response = await fetch("/api/post", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

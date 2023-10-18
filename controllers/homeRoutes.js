@@ -1,42 +1,10 @@
 // Import required dependencies and models
 const express = require("express");
 const router = express.Router();
+const postRoutes = require("./api/postRoutes");
 
 // Import Sequelize models for User and Post
 const { User, Post } = require("../models");
-
-// Route handler to display the homepage
-// http://localhost:3001/
-router.get("/", async (req, res) => {
-  try {
-    // Retrieve all posts with associated comments and users
-    const allPostsData = await Post.findAll({
-      include: [{ model: User }],
-    });
-
-    // Convert Sequelize instances to plain JavaScript objects
-    const plainPostsData = allPostsData.map((post) =>
-      post.get({ plain: true })
-    );
-
-    console.log(plainPostsData);
-
-    // Render the "homepage" view with plain post data
-    res.render("homepage", {
-      posts: plainPostsData, // Send the plain posts data to the view
-      logged_in: req.session.logged_in, // Send information about user login status
-    });
-  } catch (error) {
-    // Handle Errors: Log errors for debugging
-    console.error("Error in homepage route:", error);
-
-    // Send an error response with a 500 status and message
-    res.status(500).render("error", {
-      message: "Internal Server Error",
-      logged_in: req.session.logged_in, // Send information about user login status if needed
-    });
-  }
-});
 
 // Route handler to display the user registration form
 // http://localhost:3001/register
@@ -74,6 +42,43 @@ router.get("/login", async (req, res) => {
     res.status(500).json({ message: "Internal Server Error" });
   }
 });
+
+// Route handler to display the homepage
+// http://localhost:3001/
+router.get("/", async (req, res) => {
+  try {
+    // Retrieve all posts with associated comments and users
+    const allPostsData = await Post.findAll({
+      include: [{ model: User }],
+      attributes: { exclude: ["password"] }, // Exclude the password attribute
+    });
+
+    // Convert Sequelize instances to plain JavaScript objects
+    const plainPostsData = allPostsData.map((post) =>
+      post.get({ plain: true })
+    );
+
+    console.log(plainPostsData);
+
+    // Render the "homepage" view with plain post data
+    res.render("homepage", {
+      posts: plainPostsData, // Send the plain posts data to the view
+      logged_in: req.session.logged_in, // Send information about user login status
+    });
+  } catch (error) {
+    // Handle Errors: Log errors for debugging
+    console.error("Error in homepage route:", error);
+
+    // Send an error response with a 500 status and message
+    res.status(500).render("error", {
+      message: "Something went wrong. Please try again later.",
+      logged_in: req.session.logged_in, // Send information about user login status if needed
+    });
+  }
+});
+
+// Include postRoutes
+router.use("/post", postRoutes);
 
 // Export the router
 module.exports = router;

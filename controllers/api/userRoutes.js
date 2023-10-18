@@ -6,7 +6,7 @@ const router = express.Router();
 const { User } = require("../../models");
 
 // Route to handle user registration at the "/register" endpoint (POST request)
-// http://localhost:3001/api/users/register
+// http://localhost:3001/api/user/register
 router.post("/register", async (req, res) => {
   // Log a message to indicate that the registration route is being accessed
   console.log("Entering the registration route");
@@ -46,7 +46,7 @@ router.post("/register", async (req, res) => {
 });
 
 // Route to handle user login at the "/login" endpoint (POST request)
-// http://localhost:3001/api/users/login
+// http://localhost:3001/api/user/login
 router.post("/login", async (req, res) => {
   // Log that the login route is being accessed
   console.log("Entering the login route");
@@ -88,7 +88,7 @@ router.post("/login", async (req, res) => {
 });
 
 // Route to handle user logout at the "/logout" endpoint (DELETE request)
-// http://localhost:3001/api/users/logout
+// http://localhost:3001/api/user/logout
 router.delete("/logout", (req, res) => {
   // Logs the user out by removing the session information
   req.session.destroy(() => {
