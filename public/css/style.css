@@ -44,7 +44,8 @@ nav {
   font-size: 18px;
 }
 
-.header-link {
+.header-link,
+.header-link::after {
   font-size: 30px;
   margin-left: 18px;
 }
@@ -182,9 +183,27 @@ main {
   width: 80%;
 }
 
+.homepage-post {
+  background-color: #d7edec;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #a6a3a3;
+  border-radius: 8px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
 /* Welcome Message Styles */
 .welcome-container {
   margin-bottom: 20px;
+}
+
+.welcome-container h2,
+.welcome-container p {
+  color: #14083c;
 }
 
 /* Post Styles */
@@ -192,13 +211,15 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .post {
-  background-color: #fff;
+  background-color: #d7edec;
   border: 1px solid #ddd;
-  padding: 15px;
+  padding: 20px;
   margin-bottom: 20px;
+  border: 1px solid #ccc;
   border-radius: 8px;
   width: 100%;
   display: flex;
@@ -232,10 +253,11 @@ main {
 
 .post-btns-container {
   display: flex;
-  justify-content: flex-end;
-  gap: 10px;
+  justify-content: space-between;
+  margin-top: 10%;
 }
 
+.comment-btn,
 .edit-post-btn,
 .delete-post-btn {
   padding: 0.5rem 0.8rem;
@@ -248,9 +270,10 @@ main {
   font-size: 1rem;
 }
 
+.comment-btn:hover,
 .edit-post-btn:hover,
 .delete-post-btn:hover {
-  background-color: #11032f;
+  background-color: #3703a7;
 }
 
 /* Dashboard Styles */
@@ -350,78 +373,47 @@ main {
 }
 
 /* Edit Post Styles */
-.edit-post-container {
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+.edit-input {
+  padding: 10px;
+  margin-bottom: 18px;
+}
+
+#edit-title {
+  width: 80%;
+}
+
+#edit-content {
   width: 100%;
 }
 
-.edit-post-form {
+.edit-btn-container {
   display: flex;
-  flex-direction: column;
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 20px;
-  width: 70%; /* Adjust as needed */
+  justify-content: space-between;
 }
 
-.edit-post-form label {
-  margin-bottom: 10px;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.edit-post-form input,
-.edit-post-form textarea {
-  margin-bottom: 20px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 100%;
-  font-size: 18px;
-}
-
-.edit-post-form textarea {
-  height: 150px;
-}
-
-.edit-post-form .submit-btn,
-.edit-post-form .cancel-btn {
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-.edit-post-form .submit-btn {
-  background-color: #2d3e50;
-  color: #d9e9e8;
-  margin-right: 10px;
-}
-
-.edit-post-form .submit-btn:hover {
-  background-color: #1d2d3a;
-}
-
-.edit-post-form .cancel-btn {
-  display: inline-block;
-  padding: 10px 20px;
+.cancel-btn,
+.save-btn {
+  background-color: #1c6c1f;
+  color: fff;
+  padding: 8px 16px;
   text-align: center;
   text-decoration: none;
-  background-color: #266128;
-  color: #fff;
-  border: 1px solid #666;
-  border-radius: 5px;
+  display: inline-block;
+  font-size: 14px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
-.edit-post-form .cancel-btn:hover {
-  background-color: #45a049;
+.save-btn:hover{
+  background-color: #015104;
+}
+
+.cancel-btn {
+  background-color: #bc1f14;
+}
+
+.cancel-btn:hover {
+  background-color: #a60e03;
 }
 
 /* Comment Styles */
@@ -429,3 +421,50 @@ main {
   display: none;
 }
 
+.new-comment-form {
+  display: flex;
+  flex-direction: column;
+  background-color: #d9e9e8;
+  border-radius: 5px;
+  padding: 18px;
+  margin-top: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.comment-header {
+  margin-bottom: 18px;
+}
+
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100px; /* Adjust height as needed */
+  margin-bottom: 10px;
+}
+
+.submit-comment-btn {
+  align-self: flex-end;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #304d5b;
+  color: #d9e9e8;
+  font-size: 1rem;
+}
+
+.submit-comment-btn:hover {
+  background-color: #17303f;
+}
