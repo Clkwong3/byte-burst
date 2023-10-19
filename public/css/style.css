@@ -231,13 +231,17 @@ main {
   margin-bottom: 10px;
 }
 
+.post-title a {
+  color: #003ba2;
+}
+
 .post-content {
   font-size: 18px;
   color: #333;
 }
 
 .post-info {
-  color: #888;
+  color: #71749c;
   margin-top: 10px;
 }
 
@@ -404,7 +408,7 @@ main {
   border-radius: 5px;
 }
 
-.save-btn:hover{
+.save-btn:hover {
   background-color: #015104;
 }
 
