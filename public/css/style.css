@@ -1,4 +1,4 @@
-/* Body Styles */
+/* General Styles */
 body {
   margin: 0;
   padding: 0;
@@ -6,7 +6,6 @@ body {
   background-color: #b0c1c8;
 }
 
-/* Body Container Styles */
 .body-container {
   display: flex;
   flex-direction: column;
@@ -28,7 +27,6 @@ body {
   margin: 0;
 }
 
-/* Navigation Bar Styles */
 nav {
   display: flex;
   margin-right: 18px;
@@ -36,7 +34,6 @@ nav {
   color: #e3e9ea;
 }
 
-/* Common Styling for Header and Navigation Links */
 .header-link,
 .nav-link {
   position: relative;
@@ -63,11 +60,11 @@ nav {
   width: 100%;
 }
 
-.nav-link::after {
+.nav-link::after,
+.header-link::after {
   content: "";
   display: block;
   position: absolute;
-  margin-right: 18px;
   height: 2px;
   width: 0;
   background-color: #e3e9ea;
@@ -75,16 +72,16 @@ nav {
   transition: width 0.5s ease-in-out !important;
 }
 
-.header-link::after {
-  content: "";
-  display: block;
-  position: absolute;
-  margin-left: 18px;
-  height: 2px;
-  width: 0;
-  background-color: #e3e9ea;
-  bottom: 0px;
-  transition: width 0.5s ease-in-out !important;
+/* Center Content Styles */
+.center-content {
+  display: flex;
+  justify-content: center;
+  height: 100vh; /* Optional: Adjusts the height to full viewport height */
+}
+
+/* Adjust the width if needed */
+.container {
+  width: 100%;
 }
 
 /* Main Content Styles */
@@ -93,7 +90,7 @@ main {
   padding: 20px; /* Adjust as needed */
 }
 
-/* Homepage Main Container Styles */
+/* Homepage Styles */
 .homepage-main {
   margin: auto;
   display: flex;
@@ -103,9 +100,7 @@ main {
   width: 80%;
 }
 
-/* Register Form Styles */
-
-/* Registration Card */
+/* Form Styles */
 .register-form-card,
 .login-form-card {
   background-color: #fff;
@@ -114,7 +109,6 @@ main {
   width: 500px;
 }
 
-/* Header of the Registration Card */
 .register-body-header,
 .login-body-header {
   text-align: center;
@@ -122,25 +116,15 @@ main {
   margin-bottom: 20px;
 }
 
-/* Main Content of the Registration Card */
-.register-body-content,
-.login-body-content {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Form Row (Username, Email, Password) */
 .formRow {
   display: flex;
   margin-bottom: 10px;
 }
 
-/* Input Field in each Form Row */
 .formRow-input {
   flex: 1;
 }
 
-/* Label in each Form Row */
 .formRow-label {
   width: 120px;
   font-weight: bold;
@@ -151,7 +135,6 @@ main {
   font-size: 18px;
 }
 
-/* Input Element inside .formRow-input */
 .formRow-input input {
   width: 80%;
   padding: 10px;
@@ -161,7 +144,6 @@ main {
   font-size: 18px;
 }
 
-/* Button and Message Container */
 .button-and-message-container {
   display: flex;
   flex-direction: row;
@@ -170,13 +152,11 @@ main {
   margin-top: 20px;
 }
 
-/* Login Message */
 .register-message,
 .login-message {
   margin: 0;
 }
 
-/* Registration and Login Button */
 .register-btn,
 .login-btn {
   background-color: #266128;
@@ -188,15 +168,12 @@ main {
   cursor: pointer;
 }
 
-/* Hover for Registration and Login Button */
 .register-btn:hover,
 .login-btn:hover {
   background-color: #45a049;
 }
 
-/* Homepage Styles */
-
-/* Main Content Styles for Homepage */
+/* Homepage Main Container Styles */
 .homepage-main {
   display: flex;
   flex-direction: column;
@@ -210,14 +187,13 @@ main {
   margin-bottom: 20px;
 }
 
-/* Post Container Styles */
+/* Post Styles */
 .post-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Individual Post Styles */
 .post {
   background-color: #fff;
   border: 1px solid #ddd;
@@ -248,7 +224,6 @@ main {
   box-sizing: border-box;
 }
 
-/* No Posts Message Styles */
 .no-posts {
   color: #888;
   font-size: 18px;
@@ -275,33 +250,27 @@ main {
 
 .edit-post-btn:hover,
 .delete-post-btn:hover {
-  background-color: #11032f; 
+  background-color: #11032f;
 }
 
 /* Dashboard Styles */
-
-/* Container for user dashboard information */
 .user-dashboard {
   text-align: left;
 }
 
-/* Dashboard Header Styles */
 .dashboard-header {
   margin-bottom: 20px;
 }
 
-/* Style for the line under "Welcome, {{user.user_name}}!" */
 .dashboard-header h2 {
   border-bottom: 2px solid #2978ff;
   padding-bottom: 5px;
 }
 
-/* Container for User's Posts */
 .user-posts-container {
   text-align: left;
 }
 
-/* Container for "Your Posts" and the link to create a new post */
 .dashboard-title {
   display: flex;
   justify-content: space-between;
@@ -309,7 +278,6 @@ main {
   margin-bottom: 20px;
 }
 
-/* Style for the "No posts available" message */
 .no-posts-created {
   margin-top: 20px;
   color: #888;
@@ -317,8 +285,6 @@ main {
 }
 
 /* New Post Styles */
-
-/* New Post Form */
 .new-post-container {
   margin-top: 20px;
 }
@@ -367,7 +333,6 @@ main {
   margin-bottom: 15px;
 }
 
-/* Common Styling for Form Elements */
 .new-post-form input,
 .new-post-form textarea,
 .new-post-form {
@@ -391,7 +356,7 @@ main {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  width: 100%; 
+  width: 100%;
 }
 
 .edit-post-form {
@@ -450,7 +415,7 @@ main {
   text-decoration: none;
   background-color: #266128;
   color: #fff;
-  border: 1px solid #666; 
+  border: 1px solid #666;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -458,3 +423,9 @@ main {
 .edit-post-form .cancel-btn:hover {
   background-color: #45a049;
 }
+
+/* Comment Styles */
+.hidden {
+  display: none;
+}
+

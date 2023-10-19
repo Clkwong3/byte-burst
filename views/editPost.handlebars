@@ -1,0 +1,35 @@
+<div class="individual-post" data-post-id="{{post.id}}">
+  <div class="post">
+    <!-- Post Header -->
+    <div class="post-header">
+      <input id="edit-title" value="{{post.title}}" />
+      <p class="tagline">
+        Written by
+        {{post.User.user_name}}
+        on
+        {{format_date post.createdAt}}
+      </p>
+    </div>
+
+    <!-- Post Content -->
+    <div class="post-body">
+      {{#if isOwner}}
+        <textarea
+          class="edit-content-textarea"
+          readonly
+        >{{post.content}}</textarea>
+        <button class="edit-content-btn">&#x270F; Edit Content</button>
+      {{else}}
+        <p class="post-content">{{post.content}}</p>
+      {{/if}}
+
+      <!-- Comment Button for All Users -->
+      <div class="comment-btn-container">
+        <button class="comment-btn">Leave a Comment</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Include the script for inline editing -->
+<script src="/js/editPost.js"></script>

@@ -24,9 +24,51 @@
           <button class="edit-post-btn">&#x270F; Edit</button>
           <button class="delete-post-btn">&#x1F5D1; Delete</button>
         </div>
+
+        <!-- Include the script for post buttons -->
+        <script src="/js/postBtns.js"></script>
       {{/if}}
+
+      <!-- Comment Button for All Users -->
+      <div class="comment-btn-container">
+        <button class="comment-btn">Leave a Comment</button>
+      </div>
     </div>
   </div>
-</div>
 
-<script src="/js/postBtns.js"></script>
+  <!-- Add a form to submit new comments -->
+    <!-- Add a container for the comment form initially hidden -->
+    <div id="comment-form-container" class="hidden">
+      <form data-postId="{{post.id}}" class="form new-comment-form">
+        <!-- Textarea for entering comment content -->
+        <div class="form-group">
+          <label for="comment-content">Comment Content: </label>
+          <textarea
+            id="comment-text"
+            placeholder="Enter comment content"
+          ></textarea>
+        </div>
+        <!-- Button to submit the comment -->
+        <button class="submit-comment-btn">Submit</button>
+      </form>
+    </div>
+  <!-- Include the script for comment button handling -->
+  <script src="/js/commentBtn.js"></script>
+
+  <!-- Comments Section -->
+  <div class="comments-section">
+    <h4>Comments</h4>
+
+    {{#each comments}}
+      <div class="comment">
+        <p>{{this.contents}}</p>
+        <p class="comment-info">
+          {{this.User.username}}
+          on
+          {{format_date this.createdAt}}
+        </p>
+      </div>
+    {{/each}}
+
+  </div>
+</div>
