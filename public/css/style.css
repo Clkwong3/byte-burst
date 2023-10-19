@@ -199,6 +199,7 @@ main {
 /* Welcome Message Styles */
 .welcome-container {
   margin-bottom: 20px;
+  width: 90%;
 }
 
 .welcome-container h2,
@@ -235,8 +236,12 @@ main {
   color: #003ba2;
 }
 
+.post-header h3{
+  font-size: 45px;
+}
+
 .post-content {
-  font-size: 18px;
+  font-size: 21px;
   color: #333;
 }
 
@@ -343,7 +348,7 @@ main {
   height: 150px;
 }
 
-.new-post-form .submit-btn {
+.new-post-form .submit-post-btn {
   align-self: flex-end;
   padding: 0.5rem 1.2rem;
   border: none;

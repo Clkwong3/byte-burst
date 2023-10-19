@@ -26,10 +26,13 @@ async function addPost(e) {
     if (response.ok) {
       // Redirect to the dashboard page after successfully creating a new post
       window.location.replace("/dashboard");
+    } else {
+      // Handle the case where the server returns an error
+      console.error("Failed to create the post:", response.statusText);
     }
   } catch (error) {
     // Log and alert an error message if there's an issue creating the post
-    console.error("Error creating new post:", error.message);
+    console.error("Error creating new post:", error);
     alert("Failed to create a new post. Please try again.");
   }
 }

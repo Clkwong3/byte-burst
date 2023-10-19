@@ -1,7 +1,7 @@
 // Import necessary modules
 const express = require("express");
 const router = express.Router();
-const { Post, User } = require("../../models"); // Import the Post and User models
+const { User, Post, Comment } = require("../../models"); // Import the User, Post, and Comment models
 const withAuth = require("../../utils/auth");
 
 // Retrieve a single post by id along with comments
@@ -15,6 +15,14 @@ router.get("/:id", async (req, res) => {
         {
           model: User,
           attributes: { exclude: ["password"] }, // Exclude password field from user attributes
+        },
+        // Include the Comment model to get all comments for 1 post
+        {
+          model: Comment,
+          include: {
+            model: User,
+            attributes: ["user_name"],
+          },
         },
       ],
     });
@@ -84,7 +92,7 @@ router.get("/edit/:id", withAuth, async (req, res) => {
 });
 
 // Create a new post (Private Route, requires authentication)
-// http://localhost:3001/api/dashboard/new
+// http://localhost:3001/api/post
 router.post("/", withAuth, async (req, res) => {
   try {
     // Extract data from the request body
