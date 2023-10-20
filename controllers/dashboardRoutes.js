@@ -1,7 +1,6 @@
 // Import required dependencies and models
 const express = require("express");
 const router = express.Router();
-const postRoutes = require("./api/postRoutes");
 
 // Import Sequelize model for User and Post
 const { User, Post } = require("../models");
@@ -53,9 +52,6 @@ router.get("/new", withAuth, (req, res) => {
     logged_in: req.session.logged_in, // Pass the logged_in status to the view
   });
 });
-
-// Include postRoutes
-router.use("/post", postRoutes);
 
 // Export the router
 module.exports = router;

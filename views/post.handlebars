@@ -62,13 +62,13 @@
   <div class="comments-section">
     <h4>Comments</h4>
 
-    {{#each comments}}
+    {{#each post.comments as |comment|}}
       <div class="comment">
-        <p>{{this.contents}}</p>
+        <p>{{comment.contents}}</p>
         <p class="comment-info">
-          {{this.User.username}}
+          {{comment.User.user_name}}
           on
-          {{format_date this.createdAt}}
+          {{format_date comment.createdAt}}
         </p>
       </div>
     {{/each}}
