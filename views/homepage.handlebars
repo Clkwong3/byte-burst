@@ -6,23 +6,37 @@
   </div>
 
   <!-- Post Container -->
-  <div class="post-container">
+  <div class="homepage-post-container">
     {{#if posts}}
       {{#each posts as |post|}}
         <div class="homepage-post">
-          <h3 class="post-title">
-            <a href="/post/{{post.id}}">{{post.title}}</a>
-          </h3>
-          <p class="post-info">
-            Author:
-            {{post.User.user_name}}
-            on
-            {{format_date post.createdAt}}
-          </p>
+          <div class="homepage-post-header">
+            <h3 class="homepage-post-title">
+              <a href="/post/{{post.id}}">{{post.title}}</a>
+            </h3>
+            <p class="homepage-post-info">
+              Author:
+              {{post.User.user_name}}
+              on
+              {{format_date post.createdAt}}
+            </p>
+          </div>
+
+          <div class="homepage-preview">
+            <p class="homepage-post-content">
+              <!-- Display the first sentence of the post content -->
+              {{getFirstSentence post.content}}
+            </p>
+            <!-- Comment count section -->
+            <p class="homepage-comment-count">
+              &#x1F4AC;
+              {{post.commentCount}}
+            </p>
+          </div>
         </div>
       {{/each}}
     {{else}}
-      <p class="no-posts">No posts available.</p>
+      <p class="homepage-no-posts">No posts available.</p>
     {{/if}}
   </div>
 </div>

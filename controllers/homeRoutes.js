@@ -4,7 +4,7 @@ const router = express.Router();
 const postRoutes = require("./api/postRoutes");
 
 // Import Sequelize models for User and Post
-const { User, Post } = require("../models");
+const { User, Post, Comment } = require("../models");
 
 // Route handler to display the user registration form
 // http://localhost:3001/register
@@ -57,6 +57,19 @@ router.get("/", async (req, res) => {
     const plainPostsData = allPostsData.map((post) =>
       post.get({ plain: true })
     );
+
+    // Create an array of promises to count comments for each post
+    const commentCountPromises = plainPostsData.map(async (post) => {
+      // Count the comments for each post
+      const commentCount = await Comment.count({
+        where: { post_id: post.id },
+      });
+      // Assign the comment count to the post object
+      post.commentCount = commentCount;
+    });
+
+    // Wait for all comment counts to be calculated
+    await Promise.all(commentCountPromises);
 
     // Render the "homepage" view with plain post data
     res.render("homepage", {

@@ -183,19 +183,6 @@ main {
   width: 80%;
 }
 
-.homepage-post {
-  background-color: #d7edec;
-  padding: 15px;
-  margin-bottom: 20px;
-  border: 1px solid #a6a3a3;
-  border-radius: 8px;
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-}
-
 /* Welcome Message Styles */
 .welcome-container {
   margin-bottom: 20px;
@@ -205,6 +192,53 @@ main {
 .welcome-container h2,
 .welcome-container p {
   color: #14083c;
+}
+
+.homepage-post-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Homepage Post Styles */
+.homepage-post {
+  background-color: #d7edec;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #a6a3a3;
+  border-radius: 8px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.homepage-post-header,
+.homepage-preview {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.homepage-post-title a {
+  font-size: 24px;
+  color: #14083c;
+  margin-bottom: 10px;
+}
+
+.homepage-post-info {
+  font-size: 15px;
+  color: #49547b;
+}
+
+.homepage-post-content {
+  font-size: 21px;
+  color: #2d2a4b;
+}
+
+.homepage-comment-count {
+  font-size: 15px;
+  color: #333;
 }
 
 /* Post Styles */
@@ -236,7 +270,7 @@ main {
   color: #003ba2;
 }
 
-.post-header h3{
+.post-header h3 {
   font-size: 45px;
 }
 
