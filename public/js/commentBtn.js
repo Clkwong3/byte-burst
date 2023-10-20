@@ -43,11 +43,12 @@ async function addComment(e) {
         post_id: postId,
       }),
     });
-
+    console.log(response);
     if (response.ok) {
       // Redirect to the post page after successfully creating a new comment
       window.location.replace(`/post/${postId}`);
     } else {
+      window.location.replace("/login");
       // Handle the case where the server returns an error
       console.error("Failed to create the comment:", response.statusText);
     }

@@ -20,20 +20,17 @@ router.post("/register", async (req, res) => {
       req.session.user_id = newUser.id;
       req.session.registered_user_name = newUser.user_name;
       req.session.logged_in = true;
+      // Sending a successful response to the client with user details and a redirect path
+      res.status(201).json({
+        message: "User registered successfully.",
+        user: {
+          user_id: newUser.id,
+          registered_user_name: newUser.user_name,
+        },
+        redirect: "/dashboard",
+      });
     });
 
-    // Log a message to indicate that the registration is a success
-    console.log("Registration successful. Redirecting to /dashboard");
-
-    // Sending a successful response to the client with user details and a redirect path
-    res.status(201).json({
-      message: "User registered successfully.",
-      user: {
-        user_id: newUser.id,
-        registered_user_name: newUser.user_name,
-      },
-      redirect: "/dashboard",
-    });
   } catch (error) {
     // Handling errors that occur during user registration
     console.error("Unhandled error in registration route:", error);

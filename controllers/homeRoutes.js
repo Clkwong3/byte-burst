@@ -26,10 +26,7 @@ router.get("/login", async (req, res) => {
     // Check if the user is logged in
     if (req.session.logged_in) {
       // Render a message indicating the user is already logged in
-      res.render("message", {
-        message:
-          "You are already logged in! If you want to access a different page, you can navigate to the dashboard.",
-      });
+      res.render("homepage");
     } else {
       // Render the login form
       res.render("login");

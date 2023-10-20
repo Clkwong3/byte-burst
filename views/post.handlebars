@@ -64,12 +64,12 @@
 
     {{#each post.comments as |comment|}}
       <div class="comment">
-        <p>{{comment.contents}}</p>
         <p class="comment-info">
           {{comment.User.user_name}}
           on
           {{format_date comment.createdAt}}
         </p>
+        <p>{{comment.contents}}</p>
       </div>
     {{/each}}
 

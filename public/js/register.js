@@ -25,8 +25,7 @@ const registerFormHandler = async (event) => {
 
     // Check if the registration was successful
     if (response.ok) {
-      console.log(response);
-      console.log("Redirecting to /dashboard");
+      // Redirect to the dashboard
       window.location.replace("/dashboard");
     } else {
       alert(response.statusText);

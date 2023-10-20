@@ -31,14 +31,14 @@ nav {
   display: flex;
   margin-right: 18px;
   gap: 10px;
-  color: #e3e9ea;
+  color: #d6e3e6;
 }
 
 .header-link,
 .nav-link {
   position: relative;
   text-decoration: none;
-  color: #e3e9ea;
+  color: #d1e7eb;
   font-weight: bold;
   transition: color 0.3s;
   font-size: 18px;
@@ -52,7 +52,7 @@ nav {
 
 .header-link:hover,
 .nav-link:hover {
-  color: #e3e9ea;
+  color: #e8f9fb;
   text-decoration: none;
 }
 
@@ -68,7 +68,7 @@ nav {
   position: absolute;
   height: 2px;
   width: 0;
-  background-color: #e3e9ea;
+  background-color: #e8f9fb;
   bottom: 0;
   transition: width 0.5s ease-in-out !important;
 }
@@ -104,7 +104,7 @@ main {
 /* Form Styles */
 .register-form-card,
 .login-form-card {
-  background-color: #fff;
+  background-color: #cee0f7;
   border-radius: 8px;
   padding: 20px;
   width: 500px;
@@ -139,7 +139,7 @@ main {
 .formRow-input input {
   width: 80%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #c5c2de;
   border-radius: 5px;
   box-sizing: border-box;
   font-size: 18px;
@@ -203,10 +203,10 @@ main {
 
 /* Homepage Post Styles */
 .homepage-post {
-  background-color: #d7edec;
+  background-color: #e0eefa;
   padding: 15px;
   margin-bottom: 15px;
-  border: 1px solid #a6a3a3;
+  border: 1px solid #89899c;
   border-radius: 8px;
   width: 90%;
   display: flex;
@@ -222,7 +222,7 @@ main {
 
 .homepage-post-title a {
   font-size: 24px;
-  color: #14083c;
+  color: #15064a;
   margin-bottom: 10px;
 }
 
@@ -250,8 +250,8 @@ main {
 }
 
 .post {
-  background-color: #d7edec;
-  border: 1px solid #ddd;
+  background-color: #ddf2ff;
+  border: 1px solid #bbbac2;
   padding: 20px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
@@ -276,7 +276,7 @@ main {
 
 .post-content {
   font-size: 21px;
-  color: #333;
+  color: #333333;
 }
 
 .post-info {
@@ -289,7 +289,7 @@ main {
 }
 
 .no-posts {
-  color: #888;
+  color: #888888;
   font-size: 18px;
   margin-top: 20px;
 }
@@ -459,7 +459,7 @@ main {
   background-color: #a60e03;
 }
 
-/* Comment Styles */
+/* Comment Form Styles */
 .hidden {
   display: none;
 }
@@ -489,11 +489,11 @@ label {
 
 textarea {
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border-radius: 4px;
   box-sizing: border-box;
   width: 100%;
-  height: 100px; /* Adjust height as needed */
+  height: 100px; 
   margin-bottom: 10px;
 }
 
@@ -511,3 +511,37 @@ textarea {
 .submit-comment-btn:hover {
   background-color: #17303f;
 }
+
+/* Styles for the Comments Section */
+.comments-section {
+  background-color: #f0f5ff;
+  padding: 10px;
+  border: 1px solid #bdd2f1;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.comments-section h4 {
+  font-size: 24px;
+  color: #002b5c;
+}
+
+/* Styles for Individual Comments */
+.comment {
+  background-color: #cedced;
+  border: 1px solid #bdd2f1;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.comment p {
+  color: #022752;
+}
+
+.comment .comment-info {
+  font-size: 19px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+

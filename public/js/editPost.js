@@ -26,13 +26,12 @@ saveButton.addEventListener("click", async () => {
     });
 
     if (response.ok) {
-      // Redirect to the updated post's page or another appropriate action
-      window.location.href = `/post/${postId}`;
+      // Redirect to the dashboard
+      window.location.href = `/dashboard`;
     } else {
       // Handle errors or display error messages
       const responseData = await response.json();
-      console.error("Error updating post:", responseData.message);
-      // You can display an error message to the user if needed
+      console.error("Error updating post:", responseData.error);
     }
   } catch (error) {
     console.error("Error updating post:", error);
