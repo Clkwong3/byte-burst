@@ -1,4 +1,4 @@
-# byte-burst
+# Byte-Burst
 
 ## Overview
 
@@ -47,6 +47,8 @@ Before beginning, make sure to have the following tools installed:
 1. **Node.js and npm:** Download them from the [official Node.js website](https://nodejs.org/en/download).
 
 2. **Insomnia:** Download and install Insomnia from their [official website](https://insomnia.rest/download).
+
+[Table of Contents](#table-of-contents)
 
 ## Technology Stack
 
@@ -100,6 +102,8 @@ Here's a summary of the technologies, frameworks, and tools used in this project
 1. **Heroku:** A cloud platform for deploying and hosting web applications.
 
 2. **GitHub:** GitHub is used in the deployment workflow to automate deployments or for continuous integration/continuous deployment (CI/CD) processes.
+
+[Table of Contents](#table-of-contents)
 
 ## Installation
 
@@ -171,6 +175,8 @@ To set up and install this project, please follow these steps, including the pre
 
    - Use Insomnia to test the API endpoints and make sure the application is functioning correctly.
 
+[Table of Contents](#table-of-contents)
+
 ## Usage
 
 Whether you're a new user looking to register and get started or an existing user who wants to navigate through the features, this guide will help you make the most of **Byte Burst**.
@@ -192,7 +198,7 @@ Whether you're a new user looking to register and get started or an existing use
 3. **User Dashboard**
 
    - Once logged in, users can access the [dashboard](https://github.com/Clkwong3/byte-burst/blob/main/views/dashboard.handlebars):
-     1. **View User Posts:** The dashboard displays the user's posts, including links to view individual [posts](https://github.com/Clkwong3/byte-burst/blob/main/views/post.handlebars).
+     1. **View User Posts:** The dashboard displays the user's posts, including links to view [individual posts](https://github.com/Clkwong3/byte-burst/blob/main/views/post.handlebars).
      2. **Create New Post:** To create a new post, click the [+ New Post](https://github.com/Clkwong3/byte-burst/blob/main/public/js/addPost.js) link on the dashboard to create a [new post](https://github.com/Clkwong3/byte-burst/blob/main/views/addNew.handlebars).
 
 4. **View, Edit, and Delete Individual Posts**
@@ -211,6 +217,8 @@ Whether you're a new user looking to register and get started or an existing use
    - To log out of your account, follow these steps:
      1. While logged into your account, locate the "Logout" link in the [navigation menu](https://github.com/Clkwong3/byte-burst/blob/main/views/layouts/main.handlebars).
      2. Click the ["Logout"](https://github.com/Clkwong3/byte-burst/blob/main/public/js/logout.js) link.
+
+[Table of Contents](#table-of-contents)
 
 ## Testing
 
@@ -256,6 +264,8 @@ Here's how to test this project using Insomnia:
 
 By following these steps, you can thoroughly test this project's API endpoints to ensure they work as expected.
 
+[Table of Contents](#table-of-contents)
+
 ## Links
 
 Here are some useful resources that can help you understand and work with the technologies used in this project:
@@ -269,6 +279,10 @@ Here are some useful resources that can help you understand and work with the te
 Try out the project here:
 
 - [Byte-Burst](Your_Deployment_Link): You can access the deployed version of this project to see it in action.
+
+- [ReadMe](https://clkwong3.github.io/byte-burst/): You can access the ReadMe file on the browser.
+
+[Table of Contents](#table-of-contents)
 
 ## Credits
 
@@ -318,9 +332,11 @@ The project creator will review your pull request and provide feedback.
 
 Thank you for your interest in contributing to the project!
 
+[Table of Contents](#table-of-contents)
+
 ## Report Issue
 
-If you encounter any issues or would like to contribute to the project, here's how you can get involved:
+If you encounter any issues, here's how you can get involved:
 
 **Reporting Issues**
 
@@ -344,6 +360,10 @@ If you encounter any issues or would like to contribute to the project, here's h
 
 8. **Submit the Issue:** Click "Submit new issue," and the project creator will review it. We'll get back to you as soon as possible.
 
+[Table of Contents](#table-of-contents)
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/Clkwong3/byte-burst/blob/main/LICENSE) file for details.
+
+[Top](#byte-burst)
