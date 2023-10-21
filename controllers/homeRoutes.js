@@ -47,6 +47,7 @@ router.get("/", async (req, res) => {
     const allPostsData = await Post.findAll({
       include: [{ model: User }],
       attributes: { exclude: ["password"] }, // Exclude the password attribute
+      order: [["createdAt", "DESC"]], // Order by the 'createdAt' column in descending order
     });
 
     // Convert Sequelize instances to plain JavaScript objects
