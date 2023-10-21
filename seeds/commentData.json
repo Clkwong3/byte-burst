@@ -1,0 +1,134 @@
+[
+  {
+    "user_id": 1,
+    "post_id": 1,
+    "contents": "I'm really excited to dive into full-stack development. These books seem like the perfect starting point. Thanks for the recommendations!",
+    "createdAt": "2023-10-18T14:30:00Z"
+  },
+  {
+    "user_id": 2,
+    "post_id": 1,
+    "contents": "I've been wanting to learn full-stack development, and these books look like a great resource. Thanks for sharing!",
+    "createdAt": "2023-08-29T15:00:00Z"
+  },
+  {
+    "user_id": 6,
+    "post_id": 2,
+    "contents": "Code refactoring is so important, and your explanation makes it easy to understand. Thanks for shedding light on this crucial practice!",
+    "createdAt": "2023-10-18T16:45:00Z"
+  },
+  {
+    "user_id": 5,
+    "post_id": 2,
+    "contents": "I've heard about code refactoring, but this post really breaks it down nicely. Thanks for the informative content!",
+    "createdAt": "2023-10-30T17:15:00Z"
+  },
+  {
+    "user_id": 6,
+    "post_id": 3,
+    "contents": "The fusion of music and interactive gaming sounds fascinating. Game soundtracks have a unique role in immersing players in the gaming experience.",
+    "createdAt": "2023-05-08T18:30:00Z"
+  },
+  {
+    "user_id": 1,
+    "post_id": 3,
+    "contents": "Game soundtracks really do add another layer of immersion to gaming. It's amazing how they adapt to gameplay!",
+    "createdAt": "2023-09-06T19:00:00Z"
+  },
+  {
+    "user_id": 3,
+    "post_id": 4,
+    "contents": "I'm intrigued by the idea of becoming a full-stack developer. These books seem like a comprehensive guide. Thanks for the info!",
+    "createdAt": "2023-07-12T20:15:00Z"
+  },
+  {
+    "user_id": 2,
+    "post_id": 4,
+    "contents": "Full-stack development is a fascinating field, and these books provide a solid foundation. Thanks for sharing this learning guide!",
+    "createdAt": "2023-09-11T20:45:00Z"
+  },
+  {
+    "user_id": 2,
+    "post_id": 5,
+    "contents": "AI and machine learning are shaping the future. These books look like a great way to dive into this exciting field. Thanks for the recommendations!",
+    "createdAt": "2023-03-19T21:30:00Z"
+  },
+  {
+    "user_id": 3,
+    "post_id": 5,
+    "contents": "The world of AI is truly fascinating. I'm eager to explore these books and learn more about artificial intelligence. Thanks for sharing!",
+    "createdAt": "2023-09-05T22:00:00Z"
+  },
+  {
+    "user_id": 3,
+    "post_id": 6,
+    "contents": "Web accessibility is an essential topic. It's crucial to make the web inclusive for everyone. Thanks for highlighting this important issue!",
+    "createdAt": "2023-10-02T23:15:00Z"
+  },
+  {
+    "user_id": 4,
+    "post_id": 6,
+    "contents": "Web accessibility is something we should all prioritize. It's not just about coding; it's about making the web a better place for everyone. Thanks for raising awareness!",
+    "createdAt": "2023-10-13T23:45:00Z"
+  },
+  {
+    "user_id": 1,
+    "post_id": 7,
+    "contents": "The idea of coding musical apps is so intriguing. It's a unique fusion of creativity and technology. Thanks for sharing this exciting concept!",
+    "createdAt": "2023-06-19T00:30:00Z"
+  },
+  {
+    "user_id": 6,
+    "post_id": 7,
+    "contents": "As someone who loves both coding and music, this post speaks to me. It's a fantastic way to blend two passions. Thanks for the inspiration!",
+    "createdAt": "2023-10-04T01:00:00Z"
+  },
+  {
+    "user_id": 5,
+    "post_id": 8,
+    "contents": "Music coding projects sound like a creative journey. I'm eager to explore Sonic Pi and TidalCycles. Thanks for introducing me to these tools!",
+    "createdAt": "2023-09-23T02:15:00Z"
+  },
+  {
+    "user_id": 2,
+    "post_id": 8,
+    "contents": "I've always been curious about coding and music. Sonic Pi and TidalCycles seem like fantastic platforms to unleash creativity. Thanks for the insights!",
+    "createdAt": "2023-10-17T02:45:00Z"
+  },
+  {
+    "user_id": 4,
+    "post_id": 9,
+    "contents": "Ethical AI is a crucial topic. We must ensure that AI technologies are developed responsibly and ethically. Thanks for shedding light on this important aspect of AI.",
+    "createdAt": "2023-07-15T03:30:00Z"
+  },
+  {
+    "user_id": 6,
+    "post_id": 9,
+    "contents": "Ethical AI is a topic we all need to be aware of. It's about shaping the future of technology responsibly. Thanks for the informative post!",
+    "createdAt": "2023-07-18T04:00:00Z"
+  },
+  {
+    "user_id": 2,
+    "post_id": 10,
+    "contents": "The comparison between Handlebars and React is insightful. It's essential to choose the right tool for the job. Thanks for the clear explanation!",
+    "createdAt": "2023-10-14T05:15:00Z"
+  },
+  {
+    "user_id": 1,
+    "post_id": 10,
+    "contents": "Choosing between Handlebars and React can be a real decision-maker in web development. Thanks for breaking down their differences!",
+    "createdAt": "2023-10-23T05:45:00Z"
+  },
+  {
+    "user_id": 1,
+    "post_id": 11,
+    "contents": "Password protection is a critical aspect of web security. This comparison between Bcrypt and Argon2 helps developers make informed choices. Thanks for the insights!",
+    "createdAt": "2023-10-12T06:30:00Z"
+  },
+  {
+    "user_id": 4,
+    "post_id": 11,
+    "contents": "Web security is a top priority. This post clarifies the strengths of Bcrypt and Argon2, making it easier for developers to enhance password protection. Thanks for the valuable information!",
+    "createdAt": "2023-10-22T07:00:00Z"
+  }
+]

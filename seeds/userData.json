@@ -1,0 +1,32 @@
+[
+  {
+    "user_name": "webmaster42",
+    "email": "pieceofcake@example.com",
+    "password": "P@ssw0rd"
+  },
+  {
+    "user_name": "art_lover123",
+    "email": "iamconcernforyou@example.com",
+    "password": "SecurePwd123!"
+  },
+  {
+    "user_name": "coding_ninja",
+    "email": "sortofkindofmaybe@example.com",
+    "password": "Pwd#2023"
+  },
+  {
+    "user_name": "gamer_gURL",
+    "email": "letsplay@example.com",
+    "password": "gamingPass42"
+  },
+  {
+    "user_name": "bookworm77",
+    "email": "readthemall@example.com",
+    "password": "readingBooks77"
+  },
+  {
+    "user_name": "music_maniac",
+    "email": "musiclover@example.com",
+    "password": "musicIsLife1"
+  }
+]
