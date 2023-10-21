@@ -77,7 +77,7 @@ nav {
 .center-content {
   display: flex;
   justify-content: center;
-  height: 100vh; /* Optional: Adjusts the height to full viewport height */
+  height: 100vh;
 }
 
 /* Adjust the width if needed */
@@ -88,7 +88,7 @@ nav {
 /* Main Content Styles */
 main {
   flex: 1;
-  padding: 20px; /* Adjust as needed */
+  padding: 20px;
 }
 
 /* Homepage Styles */
@@ -222,7 +222,7 @@ main {
 .homepage-post-header,
 .homepage-preview {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -245,6 +245,7 @@ main {
 .homepage-comment-count {
   font-size: 15px;
   color: #333;
+  padding-left: 95%;
 }
 
 /* Post Styles */

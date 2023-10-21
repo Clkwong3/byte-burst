@@ -1,30 +1,36 @@
 [
   {
+    "id": 1,
     "user_name": "webmaster42",
     "email": "pieceofcake@example.com",
     "password": "P@ssw0rd"
   },
   {
+    "id": 2,
     "user_name": "art_lover123",
     "email": "iamconcernforyou@example.com",
     "password": "SecurePwd123!"
   },
   {
+    "id": 3,
     "user_name": "coding_ninja",
     "email": "sortofkindofmaybe@example.com",
     "password": "Pwd#2023"
   },
   {
+    "id": 4,
     "user_name": "gamer_gURL",
     "email": "letsplay@example.com",
     "password": "gamingPass42"
   },
   {
+    "id": 5,
     "user_name": "bookworm77",
     "email": "readthemall@example.com",
     "password": "readingBooks77"
   },
   {
+    "id": 6,
     "user_name": "music_maniac",
     "email": "musiclover@example.com",
     "password": "musicIsLife1"
