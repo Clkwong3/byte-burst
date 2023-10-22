@@ -42,7 +42,7 @@ router.get("/login", async (req, res) => {
 // Route handler to display the homepage
 // http://localhost:3001/
 router.get("/", async (req, res) => {
-  // try {
+  try {
     // Retrieve all posts with associated comments and users
     const allPostsData = await Post.findAll({
       include: [{ model: User }],
@@ -73,16 +73,16 @@ router.get("/", async (req, res) => {
       posts: plainPostsData, // Send the plain posts data to the view
       logged_in: req.session.logged_in, // Send information about user login status
     });
-  // } catch (error) {
-    // // Handle Errors: Log errors for debugging
-    // console.error("Error in homepage route:", error);
+  } catch (error) {
+    // Handle Errors: Log errors for debugging
+    console.error("Error in homepage route:", error);
 
-    // // Send an error response with a 500 status and message
-    // res.status(500).render("error", {
-    //   message: "Something went wrong. Please try again later.",
-    //   logged_in: req.session.logged_in, // Send information about user login status if needed
-    // });
-  // }
+    // Send an error response with a 500 status and message
+    res.status(500).render("error", {
+      message: "Something went wrong. Please try again later.",
+      logged_in: req.session.logged_in, // Send information about user login status if needed
+    });
+  }
 });
 
 // Export the router
