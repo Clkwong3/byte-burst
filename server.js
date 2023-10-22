@@ -25,7 +25,7 @@ app.set("view engine", "handlebars");
 
 // Configure the session
 const sess = {
-  secret: process.env.SESSION_SECRET, // Secret key for the session
+  secret: process.env.SESSION_SECRET, //  Secret key for the session
   cookie: {
     maxAge: 3600000, // Session duration in milliseconds (1 hr)
     httpOnly: true, // Restrict cookie access to HTTP
@@ -43,7 +43,7 @@ const sess = {
 app.use(session(sess));
 
 // Parse JSON and URL-encoded data (common data formats)
-app.use(express.json()); 
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Serve static files from the public directory
