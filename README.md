@@ -270,7 +270,7 @@ By following these steps, you can thoroughly test this project's API endpoints t
 
 Here are some useful resources that can help you understand and work with the technologies used in this project:
 
-- [Medium Article: A Guide into Using Handlebars with Your Express.js Application](https://waelyasmina.medium.com/a-guide-into-using-handlebars-with-your-express-js-application-22b944443b65): This article provides a detailed guide on using Handlebars with Express.js, which was instrumental in implementing the project's view layer.
+- [Medium Article: A Guide into Using Handlebars with Your Express.js Application](https://waelyasmina.medium.com/a-guide-into-using-handlebars-with-your-express-js-application-22b944443b65): This article provides a detailed guide on uasing Handlebars with Express.js, which was instrumental in implementing the project's view layer.
 
 - [YUI Handlebars Documentation](https://yssl.org/lib/yui/docs/handlebars/index.html#template-syntax): This documentation is a valuable resource for understanding the Handlebars template syntax, which is used in this project for rendering views.
 
@@ -278,9 +278,9 @@ Here are some useful resources that can help you understand and work with the te
 
 Try out the project here:
 
-- [Byte-Burst](Your_Deployment_Link): You can access the deployed version of this project to see it in action.
+- [Byte-Burst](https://frozen-tundra-27088-d0e9b54daed1.herokuapp.com/): You can access the deployed version of this project to see it in action.
 
-- [ReadMe](https://clkwong3.github.io/byte-burst/): You can access the ReadMe file on the browser.
+- [ReadMe](https://clkwong3.github.io/byte-burst/): You can access the ReadMe file for this project on the browser.
 
 [Table of Contents](#table-of-contents)
 
