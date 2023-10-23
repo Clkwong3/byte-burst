@@ -290,7 +290,7 @@ This project was developed by [Clarice Kwong](https://github.com/Clkwong3).
 
 ## Contributing
 
-If you'd like to contribute to the project with code or other contributions, we welcome your participation. Here's how you can get started:
+If you'd like to contribute to the project with code or other contributions, here's how you can get started:
 
 1. **Fork the Repository:** Start by forking the project's repository to your GitHub account.
 
