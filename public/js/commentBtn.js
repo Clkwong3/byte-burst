@@ -8,7 +8,6 @@ const commentFormContainer = document.getElementById("comment-form-container");
 commentBtn.addEventListener("click", function (e) {
   console.log("Comment Button clicked");
   // Toggle the visibility of the comment form container
-
   if (commentFormContainer.classList.contains("hidden")) {
     commentFormContainer.classList.remove("hidden");
     e.target.textContent = "Close Comment Form";
