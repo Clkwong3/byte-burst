@@ -18,7 +18,7 @@ async function deletePost() {
 
   try {
     // Send a DELETE request to delete the post
-    const response = await fetch(`/post/${postId}`, {
+    const response = await fetch(`/api/post/${postId}`, {
       method: "DELETE",
     });
 
