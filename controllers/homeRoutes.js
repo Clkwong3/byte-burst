@@ -43,6 +43,9 @@ router.get("/login", async (req, res) => {
 // http://localhost:3001/
 router.get("/", async (req, res) => {
   try {
+    // Set is_homepage to true for this route
+    const is_homepage = true;
+
     // Retrieve all posts with associated comments and users
     const allPostsData = await Post.findAll({
       include: [{ model: User }],
@@ -72,6 +75,7 @@ router.get("/", async (req, res) => {
     res.render("homepage", {
       posts: plainPostsData, // Send the plain posts data to the view
       logged_in: req.session.logged_in, // Send information about user login status
+      is_homepage, // Set the is_homepage property to true
     });
   } catch (error) {
     // Handle Errors: Log errors for debugging

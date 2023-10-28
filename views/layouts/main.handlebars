@@ -13,17 +13,19 @@
       <header class="header">
         <h1><a href="/" class="header-link">Byte Burst</a></h1>
         <nav>
-          <a href="/" class="nav-link">Home</a>
-          |
           {{#if logged_in}}
-            {{#if is_dashboard_page}}
-              <a href="#" class="nav-link logout-link">Logout</a>
-            {{else}}
+            {{#if is_homepage}}
               <a href="/dashboard" class="nav-link">Dashboard</a>
+              |
+              <a href="#" class="nav-link logout-link">Logout</a>
+            {{else if is_dashboard_page}}
+              <a href="/" class="nav-link">Home</a>
               |
               <a href="#" class="nav-link logout-link">Logout</a>
             {{/if}}
           {{else}}
+            <a href="/" class="nav-link">Home</a>
+            |
             <a href="/login" class="nav-link">Login</a>
             |
             <a href="/register" class="nav-link">Register</a>

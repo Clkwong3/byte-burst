@@ -12,6 +12,9 @@ const withAuth = require("../utils/auth");
 // http://localhost:3001/dashboard
 router.get("/", withAuth, async (req, res) => {
   try {
+    // Set is_dashboard_page to true for this route
+    const is_dashboard_page = true;
+
     // Retrieve user details with posts associated with the logged-in user
     const userData = await User.findByPk(req.session.user_id, {
       attributes: ["user_name"],
@@ -31,6 +34,7 @@ router.get("/", withAuth, async (req, res) => {
       },
       posts: plainUserData, // Pass the array of plain objects directly
       logged_in: req.session.logged_in, // Send information about user login status
+      is_dashboard_page, // Set the is_dashboard_page property to true
     });
   } catch (error) {
     // Handle Errors: Log errors for debugging
