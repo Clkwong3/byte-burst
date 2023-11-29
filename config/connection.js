@@ -11,7 +11,7 @@ const sequelize = process.env.JAWSDB_URL
       process.env.DB_USER, // Database username
       process.env.DB_PASSWORD, // Database password
       {
-        host: "localhost", // Local development host
+        host: process.env.DB_HOST || "localhost", // Use DB_HOST if defined, otherwise default to localhost
         dialect: "mysql", // Database type
         port: 3306, // Port number
       }
