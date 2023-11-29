@@ -2,7 +2,7 @@
 let userActivityTimer;
 
 // Define the inactivity timeout (30000 = 5 minutes in milliseconds)
-const inactivityTimeout = 30000;
+const inactivityTimeout = 300000;
 
 // Reset the user inactivity timer
 function resetUserInactivityTimer() {

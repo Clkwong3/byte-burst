@@ -43,7 +43,7 @@ router.put("/:id", withAuth, async (req, res) => {
       return res.status(404).json({ message: "Post not found" });
     }
 
-    // Extract data from the request body (you may customize this based on your form)
+    // Extract data from the request body 
     const { title, content } = req.body;
 
     // Update the post with the new data
