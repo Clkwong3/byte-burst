@@ -5,6 +5,7 @@ const exphbs = require("express-handlebars"); // Handlebars makes the site look 
 const path = require("path");
 const routes = require("./controllers/index");
 const helpers = require("./utils/helpers");
+require("dotenv").config();
 
 // Import Sequelize and setup the connection
 const sequelize = require("./config/connection"); // Sequelize talks to the database.
